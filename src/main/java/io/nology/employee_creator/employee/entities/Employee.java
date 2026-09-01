@@ -24,7 +24,7 @@ public class Employee {
     @Column(nullable = false, unique = true)
     private String email;
 
-    private String phone;
+    private String phoneNumber;
 
     private String jobTitle;
 
@@ -65,12 +65,12 @@ public class Employee {
         this.email = email;
     }
 
-    public String getPhone() {
-        return phone;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     public String getJobTitle() {
