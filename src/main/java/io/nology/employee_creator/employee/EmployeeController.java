@@ -48,7 +48,7 @@ public class EmployeeController {
 
     @PostMapping
     public ResponseEntity<Employee> createEmployee(
-            @Valid @RequestBody CreateEmployeeRequest data) {
+            @Valid @RequestBody @Valid CreateEmployeeRequest data) {
 
         Employee createdEmployee = this.service.create(data);
 
