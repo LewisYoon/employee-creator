@@ -1,24 +1,32 @@
 package io.nology.employee_creator.employee.dtos;
 
+import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 
 public class CreateEmployeeRequest {
 
     @NotBlank
-    @Size(max = 100)
+    @Size(max = 50)
     private String firstName;
 
     @NotBlank
-    @Size(max = 100)
+    @Size(max = 50)
     private String lastName;
 
     @NotBlank
-    @Size(max = 255)
+    @Email
+    @Size(max = 100)
     private String email;
 
-    public CreateEmployeeRequest() {
-    }
+    @Size(max = 30)
+    private String phoneNumber;
+
+    @Size(max = 100)
+    private String jobTitle;
+
+    @Size(max = 100)
+    private String department;
 
     public String getFirstName() {
         return firstName;
@@ -42,5 +50,29 @@ public class CreateEmployeeRequest {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String getJobTitle() {
+        return jobTitle;
+    }
+
+    public void setJobTitle(String jobTitle) {
+        this.jobTitle = jobTitle;
+    }
+
+    public String getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(String department) {
+        this.department = department;
     }
 }
